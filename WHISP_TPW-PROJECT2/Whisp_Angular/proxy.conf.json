@@ -1,0 +1,6 @@
+{
+    "/media": {
+      "target": "http://vascomfaria.pythonanywhere.com",
+      "secure": false
+    }
+  }

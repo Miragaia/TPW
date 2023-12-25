@@ -1,0 +1,76 @@
+<!-- login.component.html -->
+
+<div class="flex flex-col items-center justify-center min-h-screen ml-56">
+  <div class="max-w-2xl max-h-xl px-10 my-4 py-6 bg-white rounded-lg shadow-md" style='width:50rem;'>
+      <br>
+      <h1 class='text-black text-center text-4xl'>Login</h1>
+      <p class='text-center mt-4 '>If you have not created an account yet, then please
+        <a href="/register" class='text-indigo-500 text-lg font-semibold'>Sign Up</a> first.
+      </p>
+      <hr class="mb-4 mt-4">
+      <br>
+      <br>
+      <form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+        <div class="mb-4">
+            <label for="text" class="block text-lg font-medium text-gray-600">Username:</label>
+            <input type="text" id="username" formControlName="username" class="mt-1 p-2 border rounded-md w-full">
+        </div>
+        <div class="mb-4">
+            <label for="image" class="block text-lg font-medium text-gray-600">Password:</label>
+            <input type="password" id="password" formControlName="password" class="mt-1 p-2 border rounded-md w-full">
+        </div>
+        <br>
+        <div class="p-5">
+          <div class="grid grid-cols-3 gap-5">
+            <button type="button" class="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center inline-block">MailUp</button>
+            <button type="button" class="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center inline-block">Google</button>
+            <button type="button" class="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center inline-block">Github</button>
+          </div>
+        </div>
+        <br>
+        <div style="margin-left: 70%;">
+          <button class="bg-white text-gray-800 font-bold rounded border-b-2 border-indigo-500 hover:border-indigo-600 hover:bg-indigo-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+              <span class="mr-2 text-sm">Sign In</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentcolor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+              </svg>
+          </button>
+      </div>
+    </form>
+
+    <div class="py-5">
+      <div class="grid grid-cols-2 gap-1">
+        <div class="text-center sm:text-left whitespace-nowrap">
+          <button (click)="gotoForgotPassword()" class="transition duration-200 mx-5 px-5 py-4 cursor-pointer font-normal text-sm rounded-lg text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 ring-inset">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 inline-block align-text-top">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 11V7a4 4 0 118 0m-4 8v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2z" />
+            </svg>
+            <span class="inline-block ml-1">Forgot Password</span>
+          </button>
+        </div>
+        <div class="text-center sm:text-right whitespace-nowrap">
+          <button class="transition duration-200 mx-5 px-5 py-4 cursor-pointer font-normal text-sm rounded-lg text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-200 focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 ring-inset">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 inline-block align-text-bottom	">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <span class="inline-block ml-1">Help</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="max-w-2xl max-h-xl px-10" style='width:50rem;'>
+    <div class="py-5">
+      <div class="grid grid-cols-2 gap-1">
+        <div class="text-center sm:text-left whitespace-nowrap">
+          <button (click)="gobacktoFeed()" class="transition duration-200 mx-5 px-5 py-4 cursor-pointer font-normal text-sm rounded-lg text-gray-500 hover:bg-gray-200 focus:outline-none focus:bg-gray-300 focus:ring-2 focus:ring-gray-400 focus:ring-opacity-50 ring-inset">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-4 h-4 inline-block align-text-top">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            <span class="inline-block ml-1">Back to Whisp feed</span>
+          </button>
+        </div>
+      </div>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+<div class="flex justify-center ml-56">
+    <div class="max-w-2xl max-h-xl px-10 my-4 py-6 mt-10 bg-white rounded-lg shadow-md" style='width:50rem;'>
+        <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
+            <div class="mb-4 flex items-center">
+                <label for="text" class="block text-sm font-medium text-gray-600 mr-5">Text:</label>
+                <input type="text" id="text" formControlName="text" class="mt-1 p-2 border rounded-md w-full">
+            </div>
+            <div class="mb-4 flex items-center">
+                <label for="image" class="block text-sm font-medium text-gray-600 mr-2">Image:</label>
+                <input type="file" id="image" (change)="onFileChange($event, 'image')" class="mt-1 p-2 border rounded-md w-full">
+            </div>
+            <div class="mb-4 flex items-center">
+                <label for="video" class="block text-sm font-medium text-gray-600 mr-2">Video:</label>
+                <input type="file" id="video" (change)="onFileChange($event, 'video')" class="mt-1 p-2 border rounded-md w-full">
+            </div>
+            <div style="margin-left: 70%;">
+                <button class="bg-white text-gray-800 font-bold rounded border-b-2 border-indigo-500 hover:border-indigo-600 hover:bg-indigo-500 hover:text-white shadow-md py-2 px-6 inline-flex items-center">
+                    <span class="mr-2 text-sm">Create Post</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path fill="currentcolor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
